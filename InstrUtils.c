@@ -72,7 +72,7 @@ void PrintInstructionList(FILE * outfile, Instruction * instr)
 
 	/* YOUR CODE GOES HERE */
 	while (instr) {
-		PrintInstruction(outfile, i);
+		PrintInstruction(outfile, instr);
 		instr = instr -> next;
 	}
 

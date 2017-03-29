@@ -171,7 +171,7 @@ static void assign()
 	if (is_identifier(token)) {
 		variable = token;
 		printf("Variable: %c\n", variable);
-		next_token;
+		next_token();
 		if (token == '=') {
 			next_token();
 			int a = expr();
