@@ -145,7 +145,7 @@ static int expr()
 		left_reg = expr();
 		right_reg = expr();
 		reg = next_register();
-		CodeGen(Div, left_reg, right_reg, reg);
+		CodeGen(DIV, left_reg, right_reg, reg);
 		return reg;
 
 	/*Variables*/				
