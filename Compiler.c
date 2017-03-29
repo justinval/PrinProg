@@ -191,6 +191,7 @@ static void print()
 		if (is_identifier(token) == 1) {
 			CodeGen(STOREAI, 0, (token-'a')*4, EMPTY_FIELD);
 		}
+		next_token();
 	} else {
 		ERROR("Expected '#'\n");
 		exit(EXIT_FAILURE);
@@ -234,8 +235,8 @@ static void program()
 	/* YOUR CODE GOES HERE */ 
 	stmtlist();
 	if (token != '.') {
-	  ERROR("Program error.  Current input symbol is %c\n", token);
-	  exit(EXIT_FAILURE);
+		ERROR("Program error.  Current input symbol is %c\n", token);
+		exit(EXIT_FAILURE);
 	};
 }
 
