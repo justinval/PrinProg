@@ -175,7 +175,7 @@ static void assign()
 		if (token == '=') {
 			next_token();
 			int a = expr();
-			CodeGen(STOREAI, a, 0, token);
+			CodeGen(STOREAI, a, 0, (token-'a')*4);
 		}
 	} else {
 		ERROR("Expected '='\n");
@@ -189,7 +189,7 @@ static void print()
 	if (token == '#') {
 		next_token();
 		if (is_identifier(token) == 1) {
-			CodeGen(STOREAI, 0, (token-'a')*4, EMPTY_FIELD);
+			CodeGen(OUTPUTAI, 0, (token-'a')*4, EMPTY_FIELD);
 		}
 		next_token();
 	} else {
