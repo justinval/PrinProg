@@ -170,7 +170,7 @@ static void assign()
 
 	if (is_identifier(token)) {
 		variable = token;
-		printf("Variable: %c\n", variable);
+		//printf("Variable: %c\n", variable);
 		next_token();
 		if (token == '=') {
 			next_token();
@@ -217,8 +217,8 @@ static void morestmts()
 		next_token ();
 		stmtlist();
 	} else {
-		ERROR("Expected ';'\n");
-		exit(EXIT_FAILURE);
+		//ERROR("Expected ';'\n");
+		//exit(EXIT_FAILURE);
 	}
 }
 
