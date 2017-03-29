@@ -140,7 +140,7 @@ static int expr()
 		CodeGen(MUL, left_reg, right_reg, reg);
 		return reg;
 
-	case '/':
+	case '%':
 		next_token();
 		left_reg = expr();
 		right_reg = expr();
