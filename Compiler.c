@@ -175,7 +175,7 @@ static void assign()
 		if (token == '=') {
 			next_token();
 			int a = expr();
-			CodeGen(STOREAI, a, 0, (token-'a')*4);
+			CodeGen(STOREAI, 0, a, (token-'a')*4);
 		}
 	} else {
 		ERROR("Expected '='\n");
