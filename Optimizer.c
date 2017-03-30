@@ -79,7 +79,7 @@ void criticalRegisters(Instruction *head, int *listOfRegisters, int num) {
 				break;
 			case LOADAI:
 			case STOREAI:
-			case ADD: case SUB: case MUL: case DIV:
+			case ADD: case SUB: case MUL: case DIV: ;
 				int critInstruction = 0;
 
 				while (temp) {
