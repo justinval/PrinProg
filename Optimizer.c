@@ -79,15 +79,7 @@ void criticalRegisters(Instruction *head, int *listOfRegisters, int num) {
 				break;
 			case LOADAI:
 			case STOREAI:
-			case ADD:
-			case SUB:
-			case MUL:
-			case DIV:
-
-				/*If the register in the third field is a critical register,
-				all registers in the instruction are added to the 
-				listOfCriticalRegisters*/
-
+			case ADD: case SUB: case MUL: case DIV:
 				int critInstruction = 0;
 
 				while (temp) {
@@ -150,7 +142,7 @@ int main()
 	/*Initialize array of registers to 0*/
 	int i;
 	for (i = 0; i < num; i++){
-		regs[i] = 0;
+		listOfRegisters[i] = 0;
 	}
 
 
