@@ -41,6 +41,7 @@ int numberOfRegisters(Instruction *head) {
 				if (count < ptr -> field3)
 					count = ptr -> field3;
 			case OUTPUTAI:
+				break;
 		}
 
 		ptr = ptr -> next;
@@ -129,7 +130,6 @@ void criticalRegisters(Instruction *head, int *listOfRegisters, int num) {
 	return;
 }
 
-void deleteInstructions(Instruction *head, int *listOfregisters)
 int main()
 {
 	Instruction *head;
